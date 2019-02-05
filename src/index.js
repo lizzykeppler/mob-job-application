@@ -29,6 +29,17 @@ circusForm.addEventListener('submit', function(event) {
         tigerName: tigerNames
     };
     console.log(applicant);
+
+    window.location = 'thanks.html';
+
+    const serialize = JSON.stringify(applicant);
+    //turning our applicant into a JSON (format) string - allows us to send it to local storage
+    //converting applicant into a JSON object-string
+
+    window.localStorage.setItem('applicant', serialize);
+    //setItem is a method that takes two arguments
+
+
 });
 
 
